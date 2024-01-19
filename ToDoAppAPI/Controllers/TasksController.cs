@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDoAppAPI.DbServices;
 using ToDoAppAPI.Models;
+using System.Web.Http.Cors;
 
 namespace ToDoAppAPI.Controllers
 {
+    [EnableCors(origins: "https://localhost:8082", headers: "*", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class TasksController : ControllerBase
